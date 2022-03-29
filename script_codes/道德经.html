@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>daodejing</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+<nav>
+    < a href=" ">首页</ a>
+    < a href="">成语</ a>
+    < a href="">作者</ a>
+    < a href="">文献</ a>
+    < a href="">时空间GIS</ a>
+    < a href="">知识图谱</ a>
+    < a href="laozi/daodejing">老子</ a>
+</nav>
+<nav>
+    < a href="laozi/daodejing">道德经</ a>
+    < a href="laozi/translation">译本</ a>
+    < a href="laozi/idiom">成语</ a>
+    < a href="laozi/statistics">统计</ a>
+</nav>
+<div class="div-left">
+    <ul>
+        <li>道经
+            <ul id="dao_list">
+            </ul>
+        </li>
+        <li>德经
+            <ul id="de_list">
+            </ul>
+        </li>
+    </ul>
+</div>
+<button onclick="test()">测试</button>
+<div class="div-right">
+    <h>正文</h>
+    <p id="original"></p >
+    <h>译文</h>
+    <p id="translation"></p >
+    <h>注释</h>
+    <p id="annotation"></p >
+</div>
+
+
+</body>
+</html>
