@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/test.css}" rel="stylesheet">
+    <script th:src="@{/js/test.js}"></script>
+</head>
+<script>
+    function validateForm()
+    {
+        var x=document.forms["myForm"]["name"].value;
+        if (x==null || x=="")
+        {
+            alert("姓必须填写");
+            return false;
+        }
+    }
+</script>
+
+<body>
+    <p id="demo">hello</p>
+    <button type="button" onclick="myFunction()">点击这里</button>
+    <h1 th:text="${msg}"></h1>
+    <form name="myForm" th:action="@{/test1}"  th:onsubmit="validateForm()" method="post">
+        First name: <input type="text" name="name"><br>
+        Last name: <input type="password" name="passward"><br>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
